@@ -65,6 +65,11 @@
 
 @layer base {
 	:root {
+		--grid-unit: 1rem;
+		--border-radius-base: 0.5rem;
+	}
+
+	[data-theme='light'] {
 		--background: 210 40% 98%;
 		--foreground: 222 47% 11%;
 		--card: 0 0% 100%;
@@ -73,7 +78,7 @@
 		--border: 214 32% 91%;
 	}
 
-	:dark {
+	[data-theme='dark'] {
 		--background: 222 47 4%;
 		--foreground: 213 47% 4%;
 		--card: 222 47% 8%;
@@ -125,7 +130,7 @@
 }
 
 @utility card-hover {
-	@apply transition-transform duration-300 hover:scale-(1.02) hover: shadow-lg;
+	@apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
 }
 
 @utility gradient-border {
