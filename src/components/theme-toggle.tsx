@@ -1,5 +1,6 @@
 import { Moon, Sun } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { cn } from '../lib/utils'
 
 const ThemeToggle = () => {
 	const [isDarkMode, setIsDarkMode] = useState(false)
@@ -21,6 +22,9 @@ const ThemeToggle = () => {
 
 	return (
 		<button
+			className={cn(
+				'fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300 focus:outline-hidden'
+			)}
 			type="button"
 			data-theme-toggle
 			aria-label="Change theme"
